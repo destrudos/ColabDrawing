@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Drawing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="toolbar">
+        <button id="pen" class="tool-button">Pen</button>
+        <button id="eraser" class="tool-button">Eraser</button>
+        <label for="penSize">Pen Size:</label>
+        <input type="range" id="penSize" min="1" max="80" value="5">
+        <label for="eraserSize">Eraser Size:</label>
+        <input type="range" id="eraserSize" min="10" max="100" value="20">
+        <div id="colors">
+            <button class="color-button" data-color="black" style="background-color: black;"></button>
+            <button class="color-button" data-color="purple" style="background-color: purple;"></button>
+            <button class="color-button" data-color="green" style="background-color: green;"></button>
+            <button class="color-button" data-color="red" style="background-color: red;"></button>
+            <button class="color-button" data-color="gold" style="background-color: gold;"></button>
+            <button class="color-button" data-color="blue" style="background-color: blue;"></button>
+            <button class="color-button" data-color="brown" style="background-color: brown;"></button>
+            <button class="color-button" data-color="pink" style="background-color: rgb(165, 42, 165);"></button>
+        </div>
+    </div>
+    <canvas id="drawingCanvas"></canvas>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

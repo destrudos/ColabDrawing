@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#drawingCanvas {
+    border: 1px solid black;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* P³ótno na ni¿szym poziomie */
+}
+
+#toolbar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Przybornik na wy¿szym poziomie */
+}
+
+.tool-button {
+    display: block;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: none;
+    background: #eee;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.tool-button:hover {
+    background: #ddd;
+}
+
+.tool-button.active {
+    background: #bbb;
+}
+
+#penSize, #eraserSize {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#colors {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.color-button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-button.active {
+    border: 2px solid #000;
+}
